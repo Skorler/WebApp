@@ -1,0 +1,12 @@
+html,body{
+    height: 90%;
+    width: 100%;
+}
+
+body {
+    background-color: gray;
+}
+
+.container {
+    height: 100%;
+}
