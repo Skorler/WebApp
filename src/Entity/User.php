@@ -6,6 +6,7 @@ use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
@@ -19,6 +20,13 @@ class User implements UserInterface
      * @ORM\Column(type="integer")
      */
     private $id;
+
+    /**
+     * @ORM\Column(type="string", length=255, unique=true)
+     * @Assert\NotBlank()
+     * @Assert\Email()
+     */
+    private $email;
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
@@ -39,16 +47,25 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="datetime")
      */
-    private $registrationDate;
+    private $registration_date;
 
     /**
      * @ORM\Column(type="datetime")
      */
-    private $lastLogin;
+    private $last_login;
 
     public function getId(): ?int
     {
         return $this->id;
+    }
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function setEmail($email)
+    {
+        $this->email = $email;
     }
 
     /**
@@ -121,24 +138,34 @@ class User implements UserInterface
 
     public function getRegistrationDate(): ?\DateTimeInterface
     {
-        return $this->registrationDate;
+        return $this->registration_date;
     }
 
-    public function setRegistrationDate(\DateTimeInterface $registrationDate): self
+    public function setRegistrationDate(\DateTimeInterface $registration_date): self
     {
-        $this->registrationDate = $registrationDate;
+        $this->registration_date = $registration_date;
 
         return $this;
     }
 
-    public function getLastLogin(): ?\DateTimeInterface
+    public function __construct()
     {
-        return $this->lastLogin;
+        if (empty($this->registration_date)) {
+            $this->registration_date = new \DateTime();
+        }
+        if (empty($this->last_login)) {
+            $this->last_login = new \DateTime();
+        }
     }
 
-    public function setLastLogin(\DateTimeInterface $lastLogin): self
+    public function getLastLogin(): ?\DateTimeInterface
     {
-        $this->lastLogin = $lastLogin;
+        return $this->last_login;
+    }
+
+    public function setLastLogin(\DateTimeInterface $last_login): self
+    {
+        $this->last_login = $last_login;
 
         return $this;
     }

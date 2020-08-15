@@ -18,12 +18,4 @@ class DefaultController extends AbstractController
         return $this->render('enter.html.twig');
     }
 
-    /**
-     * @Route("/table", name="app_homepage")
-     */
-
-    public function show() {
-        return new Response();
-    }
-
 }

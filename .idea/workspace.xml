@@ -16,8 +16,16 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3daca7a6-fa57-4e66-9d5d-fc6e9a3bee11" name="Default Changelist" comment="">
+    <list default="true" id="3daca7a6-fa57-4e66-9d5d-fc6e9a3bee11" name="Default Changelist" comment="Transfer to Symfony. Setting up Registration &amp; Log in forms.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/enter.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/enter.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +46,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/flex" />
@@ -135,6 +143,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
@@ -144,6 +153,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
   </component>
   <component name="RecentsManager">
@@ -151,6 +161,16 @@
       <recent name="C:\Dev\WebApp\public\js" />
       <recent name="C:\Dev\WebApp\public\css" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="AppFixtures.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.AppFixtures.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -163,7 +183,8 @@
       <workItem from="1597253531072" duration="798000" />
       <workItem from="1597254379099" duration="3104000" />
       <workItem from="1597307301368" duration="20113000" />
-      <workItem from="1597394233097" duration="1977000" />
+      <workItem from="1597394233097" duration="19573000" />
+      <workItem from="1597477531230" duration="4780000" />
     </task>
     <task id="LOCAL-00001" summary="Transfer to Symfony. Setting up Registration &amp; Log in forms.">
       <created>1597395562568</created>
@@ -172,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597395562568</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Transfer to Symfony. Setting up Registration &amp; Log in forms.">
+      <created>1597396540771</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597396540771</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,25 +235,65 @@
     <option name="LAST_COMMIT_MESSAGE" value="Transfer to Symfony. Setting up Registration &amp; Log in forms." />
   </component>
   <component name="WindowStateProjectService">
+    <state x="540" y="175" key="#CLI_Interpreters" timestamp="1597415779624">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="175" key="#CLI_Interpreters/0.0.1920.1040@0.0.1920.1040" timestamp="1597415779624" />
+    <state x="552" y="178" key="#Deployment" timestamp="1597427800071">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Deployment/0.0.1920.1040@0.0.1920.1040" timestamp="1597427800071" />
+    <state x="667" y="163" key="#PHP" timestamp="1597415780728">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="163" key="#PHP/0.0.1920.1040@0.0.1920.1040" timestamp="1597415780728" />
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597412571087">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597412571087" />
     <state x="1117" y="346" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597320124630">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1117" y="346" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1597320124630" />
+    <state x="537" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597413572010">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="537" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597413572010" />
     <state x="1288" y="354" key="FileChooserDialogImpl" timestamp="1597311743957">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1288" y="354" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597311743957" />
-    <state x="1399" y="311" key="NewPhpClassDialog" timestamp="1597334085186">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1597435793076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1399" y="311" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597334085185" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597435793076" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1597435793076">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597435793076" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1597435793075">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597435793075" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1597435793076">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597435793076" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1597399582095">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1597399582095" />
+    <state x="1399" y="311" key="NewPhpClassDialog" timestamp="1597478031929">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1399" y="311" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597478031929" />
     <state x="922" y="244" key="SettingsEditor" timestamp="1597311754684">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="244" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1597311754684" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597396238213">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597396543269">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597396238213" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597396543269" />
   </component>
 </project>
