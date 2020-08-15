@@ -99,7 +99,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
         }
 
         $user = $this->entityManager->getRepository(User::class)->findOneBy(['username' => $this->getCredentials($request)['username']]);
-        $user->setLastLogin(new \DateTime());
+        $user->setLast_Login(new \DateTime());
         $this->entityManager->flush();
 
         // For example : return new RedirectResponse($this->urlGenerator->generate('some_route'));

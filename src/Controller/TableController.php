@@ -18,7 +18,7 @@ class TableController extends AbstractController
     {
         $repository = $this->getDoctrine()->getRepository(User::class);
         $users = $repository->findAll();
-        return $this->render('table.html.twig', $users);
+        return $this->render('table.html.twig', ['users'=>$users] );
 
     }
 }

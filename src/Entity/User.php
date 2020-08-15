@@ -136,12 +136,12 @@ class User implements UserInterface
         // $this->plainPassword = null;
     }
 
-    public function getRegistrationDate(): ?\DateTimeInterface
+    public function getRegistration_Date(): string
     {
-        return $this->registration_date;
+        return $this->registration_date->format('Y-m-d H:i:s');
     }
 
-    public function setRegistrationDate(\DateTimeInterface $registration_date): self
+    public function setRegistration_Date(\DateTimeInterface $registration_date): self
     {
         $this->registration_date = $registration_date;
 
@@ -158,12 +158,12 @@ class User implements UserInterface
         }
     }
 
-    public function getLastLogin(): ?\DateTimeInterface
+    public function getLast_Login(): string
     {
-        return $this->last_login;
+        return $this->last_login->format('Y-m-d H:i:s');
     }
 
-    public function setLastLogin(\DateTimeInterface $last_login): self
+    public function setLast_Login(\DateTimeInterface $last_login): self
     {
         $this->last_login = $last_login;
 
