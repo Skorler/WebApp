@@ -26,9 +26,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3daca7a6-fa57-4e66-9d5d-fc6e9a3bee11" name="Default Changelist" comment="Transfer to Symfony. Setting up Registration &amp; Log in forms.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/TableController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TableController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/table.html.twig" afterDir="false" />
     </list>
@@ -189,7 +187,7 @@
       <workItem from="1597254379099" duration="3104000" />
       <workItem from="1597307301368" duration="20113000" />
       <workItem from="1597394233097" duration="19573000" />
-      <workItem from="1597477531230" duration="16941000" />
+      <workItem from="1597477531230" duration="19906000" />
     </task>
     <task id="LOCAL-00001" summary="Transfer to Symfony. Setting up Registration &amp; Log in forms.">
       <created>1597395562568</created>
@@ -212,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597482465397</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Get data from DB &amp; display it. Toolbar dummy.">
+      <created>1597500815267</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1597500815267</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +244,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Transfer to Symfony. Setting up Registration &amp; Log in forms." />
     <MESSAGE value="Synchronization with DB. Dummy table." />
-    <option name="LAST_COMMIT_MESSAGE" value="Synchronization with DB. Dummy table." />
+    <MESSAGE value="Get data from DB &amp; display it. Toolbar dummy." />
+    <option name="LAST_COMMIT_MESSAGE" value="Get data from DB &amp; display it. Toolbar dummy." />
   </component>
   <component name="WindowStateProjectService">
     <state x="540" y="175" key="#CLI_Interpreters" timestamp="1597415779624">
@@ -298,9 +304,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="244" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1597311754684" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597482470104">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597500818961">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597482470104" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597500818961" />
   </component>
 </project>

@@ -43,15 +43,15 @@
                 <tr>
                     <td>
                         <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="checkbox custom-control-input" id="defaultChecked" checked>
-                            <label class="custom-control-label" for="defaultChecked"></label>
+                            <input type="checkbox" class="checkbox custom-control-input" id="defaultChecked {{ user.id }}" checked>
+                            <label class="custom-control-label" for="defaultChecked {{ user.id }}"></label>
                         </div>
                     </td>
                     <th scope="row">{{ user.id }}</th>
                     <td>{{ user.username }}</td>
                     <td>{{ user.email }}</td>
                     <td>{{ user.registration_date }}</td>
-                    <td>{{ user.last_login }}</td>
+                    <td>{{ user.last_Login }}</td>
                 </tr>
                 {% endfor %}
                 </tbody>
