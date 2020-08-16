@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use PhpParser\Node\Scalar\String_;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -53,6 +54,11 @@ class User implements UserInterface
      * @ORM\Column(type="datetime")
      */
     private $last_login;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isBlocked;
 
     public function getId(): ?int
     {
@@ -158,6 +164,11 @@ class User implements UserInterface
         }
     }
 
+    public function __toString() : String
+    {
+        return $this->username;
+    }
+
     public function getLast_Login(): string
     {
         return $this->last_login->format('Y-m-d H:i:s');
@@ -166,6 +177,18 @@ class User implements UserInterface
     public function setLast_Login(\DateTimeInterface $last_login): self
     {
         $this->last_login = $last_login;
+
+        return $this;
+    }
+
+    public function getIsBlocked(): ?bool
+    {
+        return $this->isBlocked;
+    }
+
+    public function setIsBlocked(bool $isBlocked): self
+    {
+        $this->isBlocked = $isBlocked;
 
         return $this;
     }

@@ -32,6 +32,8 @@ class RegistrationController extends AbstractController
                 )
             );
             $user->setLast_Login(new \DateTime());
+            $user->setIsBlocked(false);
+            $user->setRoles(ROLE_UNBLOCKED);
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);

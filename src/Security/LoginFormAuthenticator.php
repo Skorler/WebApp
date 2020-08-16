@@ -103,6 +103,9 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
             $user->setLast_Login(new \DateTime());
             $this->entityManager->flush();
         }
+        elseif ($user->getIsBlocked()) {
+            return new RedirectResponse($this->urlGenerator->generate('app_enter'));
+        }
         // For example : return new RedirectResponse($this->urlGenerator->generate('some_route'));
         return new RedirectResponse($this->urlGenerator->generate('app_homepage'));
     }

@@ -5,23 +5,22 @@
 
 {% block body %}
     <div class="container mx-auto my-auto">
-        <div class="mx-auto text-center" style="width: 70%; height: 70%; background: whitesmoke; margin-top: 10%">
-            {% if app.user %}
+        <div class="mx-auto text-center" style="background: whitesmoke; margin-top: 10%">
+            {% if app.user.isBlocked %}
+                <h1>You have been blocked</h1>
+                <h2><a href="{{ path('app_logout') }}">Logout</a></h2>
+                {% else %}
                 <div class="mb-3">
                     You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
                 </div>
-                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                    <label class="btn btn-secondary active">
-                        <input type="button" name="options" id="option1" autocomplete="off" checked> Active
-                    </label>
-                    <label class="btn btn-secondary">
-                        <input type="button" name="options" id="option2" autocomplete="off"> Radio
-                    </label>
-                    <label class="btn btn-secondary">
-                        <input type="button" name="options" id="option3" autocomplete="off"> Radio
-                    </label>
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                {{ form_start(deleteForm) }}
+                <div class="btn-group">
+                    {{ form_widget(deleteForm.block) }}
+                    {{ form_widget(deleteForm.unblock) }}
+                    {{ form_widget(deleteForm.delete) }}
                 </div>
-            {% endif %}
+            </div>
             <table class="table">
                 <thead>
                 <tr>
@@ -36,26 +35,32 @@
                     <th scope="col">Email</th>
                     <th scope="col">Registration date</th>
                     <th scope="col">Last login</th>
+                    <th scope="col">Status</th>
                 </tr>
                 </thead>
                 <tbody>
+
                 {% for user in users  %}
                 <tr>
                     <td>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="checkbox custom-control-input" id="defaultChecked {{ user.id }}" checked>
-                            <label class="custom-control-label" for="defaultChecked {{ user.id }}"></label>
-                        </div>
+                        {{ form_widget(deleteForm.selectedUsers.children[user.id]) }}
                     </td>
+
                     <th scope="row">{{ user.id }}</th>
                     <td>{{ user.username }}</td>
                     <td>{{ user.email }}</td>
                     <td>{{ user.registration_date }}</td>
                     <td>{{ user.last_Login }}</td>
+                    <td>{% if user.isBlocked %} Blocked
+                        {% else %} Unblocked
+                            {% endif %}
+                    </td>
                 </tr>
                 {% endfor %}
+                {{ form_end(deleteForm) }}
                 </tbody>
             </table>
         </div>
     </div>
+            {% endif %}
 {% endblock %}

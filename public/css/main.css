@@ -10,3 +10,30 @@ body {
 .container {
     height: 100%;
 }
+
+.delete_form_delete {
+    transition: none;
+}
+
+.delete_form_delete:hover {
+    color: #212529;
+    text-decoration: none;
+}
+
+.delete_form_delete:focus, .delete_form_delete.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.delete_form_delete.disabled, .delete_form_delete:disabled {
+    opacity: 0.65;
+}
+
+.delete_form_delete:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+a.delete_form_delete.disabled,
+fieldset:disabled a.delete_form_delete {
+    pointer-events: none;
+}
